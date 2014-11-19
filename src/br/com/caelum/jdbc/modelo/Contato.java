@@ -1,5 +1,6 @@
 package br.com.caelum.jdbc.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Contato {
@@ -19,6 +20,13 @@ public class Contato {
 	}
 
 	public Contato() {
+	}
+
+	@Override
+	public String toString() {
+		return "Contato [id=" + id + ", nome=" + nome + ", email=" + email
+				+ ", endereco=" + endereco + ", dataNascimento="
+				+ new SimpleDateFormat("dd/MM/yyyy").format(dataNascimento.getTime()) + "]";
 	}
 
 	public Long getId() {
